@@ -1,50 +1,20 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import pluginReact from "eslint-plugin-react";
-import pluginReactHooks from "eslint-plugin-react-hooks";
-import * as pluginTypescript from "@typescript-eslint/eslint-plugin";
-import pluginTailwindcss from "eslint-plugin-tailwindcss";
-
-export default [
-  {
-    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx}"],
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.es2021,
-      },
-      parserOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-    plugins: {
-      react: pluginReact,
-      "react-hooks": pluginReactHooks,
-      "@typescript-eslint": pluginTypescript,
-      tailwindcss: pluginTailwindcss,
-    },
-    rules: {
-      ...pluginJs.configs.recommended.rules,
-      ...pluginReact.configs.recommended.rules,
-      ...pluginReactHooks.configs.recommended.rules,
-      ...pluginTypescript.configs.recommended.rules,
-      ...pluginTailwindcss.configs.recommended.rules,
-      "react/react-in-jsx-scope": "off", // Not needed in React 17+
-    },
-    settings: {
-      react: {
-        version: "detect",
-      },
-    },
+export default {
+  root: true,
+  env: {browser: true, es2020: true},
+  extends: [
+    './node_modules/gts/',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
+  ],
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['react-refresh'],
+  rules: {
+    'react-refresh/only-export-components': [
+      'warn',
+      {allowConstantExport: true},
+    ],
+    'node/no-unpublished-import': 'off',
   },
-  {
-    files: ["**/*.ts", "**/*.tsx"],
-    languageOptions: {
-      parser: "@typescript-eslint/parser",
-    },
-  },
-];
+};
