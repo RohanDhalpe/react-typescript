@@ -1,34 +1,17 @@
 import "./App.css";
-import Greet from "./components/Greet";
-import Person from "./components/Person";
-import PersonList from "./components/PersonList";
+import AddDoctor from "./components/AddDoctor";
+import DoctorsRQ from "./components/DoctorsRQ";
+// import PostTraditional from "./components/DoctorsTraditional";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
-  const personName = {
-    firstname: "Rohan",
-    lastname: "Dhalpe",
-  };
-
-  const nameList = [
-    {
-      firstName: "Rohan",
-      lastName: "Dhalpe",
-    },
-    {
-      firstName: "Rohan",
-      lastName: "Dhalpe",
-    },
-    {
-      firstName: "Rohan",
-      lastName: "Dhalpe",
-    },
-  ];
+  const queryclient = new QueryClient();
   return (
-    <div className="App">
-      <Greet name="Rohan" lectureCount={20} isLoggedIn={true} />
-      <Person name={personName} />
-      <PersonList names={nameList} />
-    </div>
+    <QueryClientProvider client={queryclient}>
+      {/* <PostTraditional /> */}
+      <DoctorsRQ />
+      <AddDoctor />
+    </QueryClientProvider>
   );
 }
 
