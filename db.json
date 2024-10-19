@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "doctors": [
+    {
+      "id": "2",
+      "profile_url": "https://eyeopstagingapi.postop.ai//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa0FHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--513e4cdfae19e5adb591e8d9037290cedabc2e61/C1.jpg",
+      "full_name": "Dr. Periyasamy Kumar"
+    },
+    {
+      "id": "3",
+      "profile_url": "https://eyeopstagingapi.postop.ai//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa0VHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d79e862ccb58bf0324ccbaae4896b9dd37838688/C2.jpg",
+      "full_name": "Dr. Antonella Berry-Brincat"
+    },
+    {
+      "id": "14",
+      "profile_url": "https://eyeopstagingapi.postop.ai//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa0lHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--417e6a130a0db622faea457016bc7d3e83fcac21/C3.jpg",
+      "full_name": "Dr. Alan Fitt"
+    },
+    {
+      "id": "15",
+      "profile_url": "https://eyeopstagingapi.postop.ai//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa01HIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1253c9337f39146e34c32b86c70a16869e772c2e/C4.jpg",
+      "full_name": "Dr. Theo Empeslidis"
+    },
+    {
+      "id": "10",
+      "profile_url": "EEEEEEEEE",
+      "full_name": "HEEH"
+    },
+    {
+      "id": 10,
+      "profile_url": "JJJ",
+      "full_name": "RRRR"
+    }
+  ],
+  "message": "List of consultants"
+}
