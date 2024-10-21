@@ -4,32 +4,72 @@
     {
       "id": "2",
       "profile_url": "https://eyeopstagingapi.postop.ai//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa0FHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--513e4cdfae19e5adb591e8d9037290cedabc2e61/C1.jpg",
-      "full_name": "Dr. Periyasamy Kumar"
+      "full_name": "Dr. Periyasamy Kumar",
+      "email": "periyasamy.kumar@example.com",
+      "password": "examplePassword1",
+      "country": "India",
+      "mobile_number": "+911234567890",
+      "city": "Chennai"
     },
     {
       "id": "3",
       "profile_url": "https://eyeopstagingapi.postop.ai//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa0VHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d79e862ccb58bf0324ccbaae4896b9dd37838688/C2.jpg",
-      "full_name": "Dr. Antonella Berry-Brincat"
+      "full_name": "Dr. Antonella Berry-Brincat",
+      "email": "antonella.berry@example.com",
+      "password": "examplePassword2",
+      "country": "Malta",
+      "mobile_number": "+35612345678",
+      "city": "Valletta"
     },
     {
       "id": "14",
       "profile_url": "https://eyeopstagingapi.postop.ai//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa0lHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--417e6a130a0db622faea457016bc7d3e83fcac21/C3.jpg",
-      "full_name": "Dr. Alan Fitt"
+      "full_name": "Dr. Alan Fitt",
+      "email": "alan.fitt@example.com",
+      "password": "examplePassword3",
+      "country": "United Kingdom",
+      "mobile_number": "+441234567890",
+      "city": "London"
     },
     {
       "id": "15",
       "profile_url": "https://eyeopstagingapi.postop.ai//rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa01HIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1253c9337f39146e34c32b86c70a16869e772c2e/C4.jpg",
-      "full_name": "Dr. Theo Empeslidis"
+      "full_name": "Dr. Theo Empeslidis",
+      "email": "theo.empeslidis@example.com",
+      "password": "examplePassword4",
+      "country": "Greece",
+      "mobile_number": "+301234567890",
+      "city": "Athens"
     },
     {
-      "id": "10",
+      "id": "16",
       "profile_url": "EEEEEEEEE",
-      "full_name": "HEEH"
+      "full_name": "HEEH",
+      "email": "heeh@example.com",
+      "password": "examplePassword5",
+      "country": "Unknown",
+      "mobile_number": "+0000000000",
+      "city": "Unknown"
     },
     {
-      "id": 10,
+      "id": "17",
       "profile_url": "JJJ",
-      "full_name": "RRRR"
+      "full_name": "RRRR",
+      "email": "rrrr@example.com",
+      "password": "examplePassword6",
+      "country": "Unknown",
+      "mobile_number": "+0000000000",
+      "city": "Unknown"
+    },
+    {
+      "id": "18",
+      "profile_url": "ww",
+      "full_name": "q",
+      "email": "q@gmail.com",
+      "password": "22",
+      "country": "22",
+      "mobile_number": "22",
+      "city": "2222"
     }
   ],
   "message": "List of consultants"

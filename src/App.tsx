@@ -1,5 +1,6 @@
 import "./App.css";
-import AddDoctor from "./components/AddDoctor";
+import AddDoctorWithYup from "./components/AddDoctorWithYup";
+// import AddDoctorWithoutYup from "./components/AddDoctorWithoutYup";
 import DoctorsRQ from "./components/DoctorsRQ";
 // import PostTraditional from "./components/DoctorsTraditional";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -10,7 +11,8 @@ function App() {
     <QueryClientProvider client={queryclient}>
       {/* <PostTraditional /> */}
       <DoctorsRQ />
-      <AddDoctor />
+      {/* <AddDoctorWithoutYup /> */}
+      <AddDoctorWithYup />
     </QueryClientProvider>
   );
 }
