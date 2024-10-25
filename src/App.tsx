@@ -1,5 +1,5 @@
-import "./App.css";
-import AddDoctorWithYup from "./components/AddDoctorWithYup";
+import AddDoctorWithYup from "./components/AddDoctor/AddDoctorWithYup";
+import Approuter from "./components/Approuter";
 // import AddDoctorWithoutYup from "./components/AddDoctorWithoutYup";
 import DoctorsRQ from "./components/DoctorsRQ";
 // import PostTraditional from "./components/DoctorsTraditional";
@@ -10,9 +10,10 @@ function App() {
   return (
     <QueryClientProvider client={queryclient}>
       {/* <PostTraditional /> */}
-      <DoctorsRQ />
+      {/* <DoctorsRQ /> */}
       {/* <AddDoctorWithoutYup /> */}
-      <AddDoctorWithYup />
+      {/* <AddDoctorWithYup /> */}
+      <Approuter />
     </QueryClientProvider>
   );
 }

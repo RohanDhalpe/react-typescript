@@ -16,5 +16,7 @@ export default {
       {allowConstantExport: true},
     ],
     'node/no-unpublished-import': 'off',
+    'no-unused-vars': ['error', {argsIgnorePattern: '^_'}],  
+    '@typescript-eslint/no-unused-vars': ['warn', {varsIgnorePattern: '^_'}],
   },
 };

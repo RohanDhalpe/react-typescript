@@ -1,5 +1,11 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { getDoctors, postDoctors, postDoctorsVariables } from "./api";
+import {
+  getDoctorDetals,
+  getDoctors,
+  postDoctors,
+  postDoctorsVariables,
+} from "./api";
+import { get } from "http";
 
 export function useGetDoctors() {
   const { data, isError, isLoading } = useQuery({
@@ -30,5 +36,18 @@ export function useCreateDoctors() {
     data,
     isError,
     createDoctor,
+  };
+}
+
+export function useDoctorDetails(id: number) {
+  const { data, isError, isLoading } = useQuery({
+    queryKey: ["doctor-details", id],
+    queryFn: () => getDoctorDetals(id),
+  });
+
+  return {
+    data,
+    isError,
+    isLoading,
   };
 }

@@ -1,8 +1,8 @@
-import { useCreateDoctors } from "../hooks";
+import { useCreateDoctors } from "../../hooks";
 import { useFormik } from "formik";
-import { DoctorSchema } from "../schema";
+import { DoctorSchema } from "../../schema";
 
-function AddDoctorWithYup() {
+function AddDoctorWithYupComponent() {
   const { createDoctor } = useCreateDoctors();
 
   interface DoctorFormData {
@@ -201,4 +201,4 @@ function AddDoctorWithYup() {
   );
 }
 
-export default AddDoctorWithYup;
+export default AddDoctorWithYupComponent;

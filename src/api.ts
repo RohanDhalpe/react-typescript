@@ -1,5 +1,5 @@
 import { axiosInstance } from "./axios";
-import { ApiRoute } from "./constants";
+import { ApiRoute } from "./components/constants/apiroute";
 
 export interface getDoctorResponseData {
   id: string;
@@ -66,5 +66,13 @@ export async function postDoctors(variables: postDoctorsVariables) {
       city,
     },
   );
+  return response.data;
+}
+
+export async function getDoctorDetals(id: number) {
+  const response = await axiosInstance.get<getDoctorResponseData[]>(
+    ApiRoute.Doctors + `${id}`,
+  );
+
   return response.data;
 }
