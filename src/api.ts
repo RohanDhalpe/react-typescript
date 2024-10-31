@@ -20,7 +20,6 @@ export async function getDoctors() {
 }
 
 export interface postDoctorsVariables {
-  id: number;
   full_name: string;
   profile_url: string;
   email: string;
@@ -43,7 +42,6 @@ export interface postDoctorResponseData {
 
 export async function postDoctors(variables: postDoctorsVariables) {
   const {
-    id,
     full_name,
     profile_url,
     email,
@@ -56,7 +54,6 @@ export async function postDoctors(variables: postDoctorsVariables) {
   const response = await axiosInstance.post<postDoctorResponseData[]>(
     ApiRoute.Doctors,
     {
-      id,
       profile_url,
       full_name,
       email,

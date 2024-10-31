@@ -17,7 +17,6 @@ function AddDoctorWithYupComponent() {
 
   const handleSubmit = async (values: DoctorFormData) => {
     const doctorVariables = {
-      id: 5,
       full_name: values.fullName,
       profile_url: values.profileUrl,
       email: values.email,
@@ -28,8 +27,7 @@ function AddDoctorWithYupComponent() {
     };
 
     try {
-      await createDoctor(doctorVariables);
-      alert("Doctor added successfully!");
+      createDoctor(doctorVariables);
       formik.resetForm();
     } catch (error) {
       console.error("Failed to add doctor:", error);
