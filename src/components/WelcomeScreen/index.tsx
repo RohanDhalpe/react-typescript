@@ -1,6 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { RoutePath } from "../lib/route";
 
 const WelcomeScreen = () => {
+  const navigate = useNavigate();
+
   const styles: React.CSSProperties = {
     display: "flex",
     flexDirection: "column",
@@ -47,16 +51,6 @@ const WelcomeScreen = () => {
     backgroundColor: "#28A745",
   };
 
-  const patientButtonStyles: React.CSSProperties = {
-    ...buttonStyles,
-    backgroundColor: "#FFC107",
-  };
-
-  const staffButtonStyles: React.CSSProperties = {
-    ...buttonStyles,
-    backgroundColor: "#17A2B8",
-  };
-
   return (
     <div style={styles}>
       <div style={contentStyles}>
@@ -70,6 +64,7 @@ const WelcomeScreen = () => {
         <div style={buttonContainerStyles}>
           <button
             style={doctorButtonStyles}
+            onClick={() => navigate(RoutePath.DoctorList)}
             onMouseEnter={(e) =>
               (e.currentTarget.style.backgroundColor = "#218838")
             }
@@ -77,29 +72,7 @@ const WelcomeScreen = () => {
               (e.currentTarget.style.backgroundColor = "#28A745")
             }
           >
-            Create Doctor
-          </button>
-          <button
-            style={patientButtonStyles}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.backgroundColor = "#E0A800")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.backgroundColor = "#FFC107")
-            }
-          >
-            Patient Portal
-          </button>
-          <button
-            style={staffButtonStyles}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.backgroundColor = "#138496")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.backgroundColor = "#17A2B8")
-            }
-          >
-            Staff Portal
+            Doctors List
           </button>
         </div>
       </div>

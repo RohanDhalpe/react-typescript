@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import { RoutePath } from "./route";
 import WelcomeScreen from "../WelcomeScreen";
-import AddDoctorWithYup from "../AddDoctor/AddDoctorWithYup";
+import AddDoctor from "../AddDoctor/AddDoctorWithYup";
+import DoctorList from "../DoctorDetails";
 
 export const router = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ export const router = createBrowserRouter([
   },
   {
     path: RoutePath.addDoctor,
-    element: <AddDoctorWithYup />,
+    element: <AddDoctor />,
+  },
+  {
+    path: RoutePath.DoctorList,
+    element: <DoctorList />,
   },
 ]);

@@ -1,19 +1,20 @@
 import { axiosInstance } from "./axios";
 import { ApiRoute } from "./components/constants/apiroute";
 
-export interface getDoctorResponseData {
-  id: string;
-  full_name: string;
-  profile_url: string;
-  email: string;
-  password: string;
-  country: string;
-  mobile_number: string;
-  city: string;
+export interface getDoctorListResponseData {
+  success: boolean;
+  message: string;
+  data: {
+    id: string;
+    full_name: string;
+    email: string;
+    country: string;
+    mobile_number: string;
+  }[];
 }
 
-export async function getDoctors() {
-  const response = await axiosInstance.get<getDoctorResponseData[]>(
+export async function getDoctorsList() {
+  const response = await axiosInstance.get<getDoctorListResponseData>(
     ApiRoute.Doctors,
   );
   return response.data;
@@ -67,7 +68,7 @@ export async function postDoctors(variables: postDoctorsVariables) {
 }
 
 export async function getDoctorDetals(id: number) {
-  const response = await axiosInstance.get<getDoctorResponseData[]>(
+  const response = await axiosInstance.get<getDoctorListResponseData[]>(
     ApiRoute.Doctors + `${id}`,
   );
 
