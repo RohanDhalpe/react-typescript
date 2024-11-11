@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { RoutePath } from "./route";
 import WelcomeScreen from "../WelcomeScreen";
 import AddDoctor from "../AddDoctor/AddDoctorWithYup";
-import DoctorList from "../DoctorDetails";
+import DoctorList from "../DoctorsList";
 
 export const router = createBrowserRouter([
   {
