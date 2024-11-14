@@ -1,19 +1,9 @@
 import { useCreateDoctors } from "../../hooks";
 import { useFormik } from "formik";
-import { DoctorSchema } from "../../schema";
+import { DoctorFormData, DoctorSchema } from "./schema";
 
 function AddDoctorWithYupComponent() {
   const { createDoctor } = useCreateDoctors();
-
-  interface DoctorFormData {
-    fullName: string;
-    profileUrl: string;
-    email: string;
-    password: string;
-    country: string;
-    mobileNumber: string;
-    city: string;
-  }
 
   const handleSubmit = async (values: DoctorFormData) => {
     const doctorVariables = {
@@ -23,7 +13,6 @@ function AddDoctorWithYupComponent() {
       password: values.password,
       country: values.country,
       mobile_number: values.mobileNumber,
-      city: values.city,
     };
 
     try {
@@ -42,7 +31,6 @@ function AddDoctorWithYupComponent() {
       password: "",
       country: "",
       mobileNumber: "",
-      city: "",
     },
     validationSchema: DoctorSchema,
     onSubmit: handleSubmit,
@@ -163,22 +151,6 @@ function AddDoctorWithYupComponent() {
         />
         {touched.mobileNumber && errors.mobileNumber ? (
           <div style={{ color: "red" }}>{errors.mobileNumber}</div>
-        ) : null}
-
-        <input
-          name="city"
-          placeholder="Enter city"
-          onChange={handleChange}
-          onBlur={handleBlur}
-          value={values.city}
-          style={{
-            padding: "10px",
-            borderRadius: "4px",
-            border: "1px solid #ccc",
-          }}
-        />
-        {touched.city && errors.city ? (
-          <div style={{ color: "red" }}>{errors.city}</div>
         ) : null}
 
         <button

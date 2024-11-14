@@ -1,6 +1,6 @@
 export const RoutePath = {
   indexRoute: "/",
-  addDoctor: "/add-doctor",
-  loginRoute: "/login",
+  AddDoctor: "/add-doctor",
+  LoginRoute: "/login",
   DoctorList: "listdoctors",
 };

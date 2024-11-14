@@ -1,5 +1,11 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { getDoctorsList, postDoctors, postDoctorsVariables } from "./api";
+import {
+  getDoctorsList,
+  postDoctors,
+  postDoctorsVariables,
+  postLogin,
+  PostLoginVariables,
+} from "./api";
 
 export function useGetDoctorsList() {
   const { data, isError, isLoading } = useQuery({
@@ -30,5 +36,28 @@ export function useCreateDoctors() {
     data,
     isError,
     createDoctor,
+  };
+}
+
+export function useLogin() {
+  const {
+    mutate,
+    data,
+    isError,
+    isPending: isLoginPending,
+  } = useMutation({
+    mutationKey: ["login"],
+    mutationFn: postLogin,
+  });
+
+  const sendLoginRequest = (variables: PostLoginVariables) => {
+    mutate(variables);
+  };
+
+  return {
+    data,
+    isError,
+    sendLoginRequest,
+    isLoginPending,
   };
 }

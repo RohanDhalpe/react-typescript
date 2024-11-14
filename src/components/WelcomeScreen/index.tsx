@@ -51,6 +51,11 @@ const WelcomeScreen = () => {
     backgroundColor: "#28A745",
   };
 
+  const loginButtonStyles: React.CSSProperties = {
+    ...buttonStyles,
+    backgroundColor: "#007BFF",
+  };
+
   return (
     <div style={styles}>
       <div style={contentStyles}>
@@ -73,6 +78,18 @@ const WelcomeScreen = () => {
             }
           >
             Doctors List
+          </button>
+          <button
+            style={loginButtonStyles}
+            onClick={() => navigate(RoutePath.LoginRoute)}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.backgroundColor = "#0056b3")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.backgroundColor = "#007BFF")
+            }
+          >
+            Login
           </button>
         </div>
       </div>

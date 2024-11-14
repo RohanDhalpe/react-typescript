@@ -16,5 +16,12 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "src/components/constants/apiroute.ts"]
+  "include": [
+    "src",
+    "src/components/constants/apiroute.ts",
+    "node_modules/@types/babel__core/index.d.ts",
+    "node_modules/@types/babel__generator/index.d.ts",
+    "node_modules/@types/babel__template/index.d.ts",
+    "node_modules/@types/babel__traverse/index.d.ts"
+  ]
 }

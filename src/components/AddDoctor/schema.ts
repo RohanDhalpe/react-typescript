@@ -23,4 +23,4 @@ export const DoctorSchema = object({
     .transform((_, val) => (Number.isNaN(val) ? undefined : val)),
 });
 
-export type PatientContactDetailsFormData = InferType<typeof DoctorSchema>;
+export type DoctorFormData = InferType<typeof DoctorSchema>;
