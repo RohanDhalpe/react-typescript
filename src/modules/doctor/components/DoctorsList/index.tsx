@@ -1,4 +1,4 @@
-import { useGetDoctorsList } from "../../hooks";
+import { useGetDoctorsList } from "../../../../hooks";
 
 function DoctorList() {
   const { isError, isLoading, data: doctors } = useGetDoctorsList();

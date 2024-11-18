@@ -4,6 +4,7 @@ import WelcomeScreen from "../WelcomeScreen";
 import AddDoctor from "../AddDoctor/AddDoctorWithYup";
 import DoctorList from "../DoctorsList";
 import Login from "../login";
+import Dashboard from "../Dashboard/component";
 
 export const router = createBrowserRouter([
   {
@@ -21,5 +22,9 @@ export const router = createBrowserRouter([
   {
     path: RoutePath.LoginRoute,
     element: <Login />,
+  },
+  {
+    path: RoutePath.Dashboard,
+    element: <Dashboard />,
   },
 ]);

@@ -1,5 +1,5 @@
 import { axiosInstance } from "./axios";
-import { ApiRoute } from "./components/constants/apiroute";
+import { ApiRoute } from "./modules/doctor/components/constants/apiroute";
 
 export interface getDoctorListResponseData {
   success: boolean;

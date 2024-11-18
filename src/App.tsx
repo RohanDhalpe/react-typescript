@@ -1,6 +1,5 @@
-import Approuter from "./components/Approuter";
-
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Approuter from "./modules/doctor/components/router/Approuter";
 
 function App() {
   const queryclient = new QueryClient();

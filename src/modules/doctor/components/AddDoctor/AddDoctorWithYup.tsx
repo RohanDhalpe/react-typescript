@@ -1,4 +1,4 @@
-import { useCreateDoctors } from "../../hooks";
+import { useCreateDoctors } from "../../../../hooks";
 import { useFormik } from "formik";
 import { DoctorFormData, DoctorSchema } from "./schema";
 

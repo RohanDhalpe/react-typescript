@@ -6,6 +6,8 @@ import {
   postLogin,
   PostLoginVariables,
 } from "./api";
+import { useNavigate } from "react-router-dom";
+import { RoutePath } from "./modules/doctor/components/lib/route";
 
 export function useGetDoctorsList() {
   const { data, isError, isLoading } = useQuery({
@@ -40,6 +42,8 @@ export function useCreateDoctors() {
 }
 
 export function useLogin() {
+  const navigate = useNavigate();
+
   const {
     mutate,
     data,
@@ -48,6 +52,9 @@ export function useLogin() {
   } = useMutation({
     mutationKey: ["login"],
     mutationFn: postLogin,
+    onSuccess: () => {
+      navigate(RoutePath.Dashboard);
+    },
   });
 
   const sendLoginRequest = (variables: PostLoginVariables) => {
